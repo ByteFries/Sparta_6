@@ -37,5 +37,5 @@ void AC_Platform::LinearMovement(const FVector& StartLocation, const FVector& Di
 
 void AC_Platform::AngularMovement(const FRotator& RotateAxis, float Speed)
 {
-	AddActorLocalRotation(RotateAxis * Speed);
+	AddActorLocalRotation(RotateAxis * Speed * GetWorld()->GetTimeSeconds());
 }
